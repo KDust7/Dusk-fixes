@@ -17,6 +17,7 @@ DuskJS runs native JavaScript inside Web Workers by default, with SpiderMonkey W
 - A Service Worker can route browser requests to an `http.createServer()` running inside Dusk, which means a dev server can load in an iframe.
 - Hosts can restrict network access with an allowlist and cap process count, run time and output size.
 - PTYs have a line discipline with echo, raw mode, `^C`/`^D`/`^Z` and `SIGWINCH`.
+- Engine pool warm-up (`initEnginePool`) only matters for `spidermonkey-legacy`. Native workers start on demand.
 - `dpm` (also reachable as `dpx`, `npm`, `npx` and `pnpm`) installs verified registry, HTTPS tarball, local tarball and workspace packages.
 - Outbound networking goes through Nova, a Rust/WASM HTTP client over Wisp, or the MoonBeam relay.
 - `@nightnetwork/dusk-sqlite` adds `/bin/sqlite3` and `node:sqlite`.
